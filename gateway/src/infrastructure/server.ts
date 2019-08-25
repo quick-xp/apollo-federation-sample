@@ -17,9 +17,9 @@ app.use(bodyParser.json())
 
 const gateway = new ApolloGateway({
   serviceList: [
-    { name: 'accounts', url: 'http://localhost:3001/graphql' },
-    { name: 'products', url: 'http://localhost:3002/graphql' },
-    { name: 'reviews', url: 'http://localhost:3003/graphql' }
+    { name: 'accounts', url: `${process.env.ACCOUNT_URL}/graphql` },
+    { name: 'products', url: `${process.env.PRODUCT_URL}/graphql` },
+    { name: 'reviews', url: `${process.env.REVIEW_URL}/graphql` }
   ]
 })
 

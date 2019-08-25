@@ -1,0 +1,24 @@
+FROM ruby:2.3.2
+
+RUN apt-get update && apt-get install -y mysql-client --no-install-recommends && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y cron rsyslog supervisor vim locales locales-all --no-install-recommends
+RUN locale-gen en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
+
+# timezone
+RUN cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+
+# 公開ポート
+EXPOSE 3001
+
+WORKDIR /tmp
+ADD Gemfile Gemfile
+ADD Gemfile.lock Gemfile.lock
+RUN bundle install
+
+ENV APP_ROUTE /app
+RUN mkdir -p $APP_ROUTE
+WORKDIR $APP_ROUTE
+ADD . $APP_ROUTE

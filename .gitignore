@@ -18,3 +18,13 @@
 !*/tmp/.keep
 
 */.byebug_history
+
+# node
+*/node_modules
+*/build
+*/npm-debug.log
+*/.env
+*/.DS_Store
+*/dist
+*/.vscode
+*/coverage

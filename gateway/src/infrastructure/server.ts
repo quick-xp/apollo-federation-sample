@@ -22,8 +22,8 @@ async function run() {
   const gateway = new ApolloGateway({
     serviceList: [
       { name: 'accounts', url: `${process.env.ACCOUNT_URL}/graphql` },
-      { name: 'products', url: `${process.env.PRODUCT_URL}/graphql` },
-      { name: 'reviews', url: `${process.env.REVIEW_URL}/graphql` }
+      { name: 'products', url: `${process.env.PRODUCT_URL}/graphql` }
+      // { name: 'reviews', url: `${process.env.REVIEW_URL}/graphql` }
     ]
   })
 

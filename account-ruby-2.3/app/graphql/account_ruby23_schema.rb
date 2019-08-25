@@ -1,4 +1,6 @@
 class AccountRuby23Schema < GraphQL::Schema
-  mutation(Types::MutationType)
+  include ApolloFederation::Schema
+  # TODO { _service { sdl } } results in GraphQLSchemaValidationError
+  #mutation(Types::MutationType)
   query(Types::QueryType)
 end

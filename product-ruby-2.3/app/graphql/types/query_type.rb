@@ -1,13 +1,11 @@
 module Types
   class QueryType < Types::BaseObject
-    # Add root-level fields here.
-    # They will be entry points for queries on your schema.
+    field :top_products, [ProductType], null: false do
+      argument :first, Int, required: false, default_value: 3
+    end
 
-    # TODO: remove me
-    field :test_field, String, null: false,
-      description: "An example field added by the generator"
-    def test_field
-      "Hello World!"
+    def top_products(first:)
+      Product.first(first)
     end
   end
 end

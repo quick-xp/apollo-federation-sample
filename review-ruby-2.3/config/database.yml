@@ -9,7 +9,7 @@ development:
   host: db
   username: root
   password:
-  database: federation_product_development
+  database: federation_review_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -19,4 +19,4 @@ test:
   host: db
   username: root
   password:
-  database: federation_product_test
+  database: federation_review_test

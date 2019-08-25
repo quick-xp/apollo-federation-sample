@@ -10,9 +10,6 @@ ENV LC_ALL en_US.UTF-8
 # timezone
 RUN cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
-# 公開ポート
-EXPOSE 3001
-
 WORKDIR /tmp
 ADD Gemfile Gemfile
 ADD Gemfile.lock Gemfile.lock

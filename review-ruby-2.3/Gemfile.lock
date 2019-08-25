@@ -41,6 +41,8 @@ GEM
     annotate (2.7.5)
       activerecord (>= 3.2, < 7.0)
       rake (>= 10.4, < 13.0)
+    apollo-federation (0.2.0)
+      graphql
     arel (8.0.0)
     better_errors (2.5.1)
       coderay (>= 1.0.0)
@@ -161,6 +163,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  apollo-federation
   better_errors
   byebug
   graphql

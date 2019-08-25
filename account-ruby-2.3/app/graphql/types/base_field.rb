@@ -5,8 +5,10 @@ module Types
     include ApolloFederation::Field
     argument_class Types::BaseArgument
 
-    def resolve_field(obj, args, ctx)
-      resolve(obj, args, ctx)
-    end
+    # TODO comment out because it doesn't work
+    # error: no implicit conversion of #<Class:0x0055bfda358230> into Hash
+    #def resolve_field(obj, args, ctx)
+    #  resolve(obj, args, ctx)
+    #end
   end
 end

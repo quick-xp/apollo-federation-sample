@@ -3,7 +3,7 @@
 # Table name: reviews
 #
 #  id          :bigint           not null, primary key
-#  auther_id   :integer
+#  author_id   :integer
 #  product_upc :string(255)
 #  score       :decimal(10, )
 #  body        :string(255)

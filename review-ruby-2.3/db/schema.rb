@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20190825103249) do
 
   create_table "reviews", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "auther_id"
+    t.integer "author_id"
     t.string "product_upc"
     t.decimal "score", precision: 10
     t.string "body"

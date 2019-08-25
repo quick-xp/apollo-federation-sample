@@ -4,6 +4,13 @@ import { ApolloServer } from 'apollo-server'
 import { ApolloGateway } from '@apollo/gateway'
 
 const app = express()
+const env = app.get('env')
+const currentPath = process.cwd()
+
+if (env === 'development') {
+  const dotenv = require('dotenv')
+  dotenv.config({ path: `${currentPath}/config/${env}.env` })
+}
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())

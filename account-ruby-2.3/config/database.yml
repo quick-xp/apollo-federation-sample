@@ -1,12 +1,12 @@
 default: &default
   adapter: mysql2
   encoding: utf8
-  host: db
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: 5
   timeout: 5000
 
 development:
   <<: *default
+  host: db
   username: root
   password:
   database: federation_account_development
@@ -16,6 +16,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+  host: db
   username: root
   password:
   database: federation_account_test

@@ -9,5 +9,9 @@ module Types
     def search_user(id:)
       User.find(id)
     end
+
+    def me
+      User.first
+    end
   end
 end

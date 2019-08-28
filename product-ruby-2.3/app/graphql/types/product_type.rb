@@ -9,7 +9,7 @@ module Types
     field :weight, Integer, null: true
 
     def self.resolve_reference(reference, _context)
-      Product.find(reference[:upc])
+      Product.find_by(upc: reference[:upc])
     end
   end
 end

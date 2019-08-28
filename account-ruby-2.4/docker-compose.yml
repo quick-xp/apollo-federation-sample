@@ -1,0 +1,30 @@
+version: '3'
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3001:3001"
+    command: bundle exec rails s -p 3001 -b '0.0.0.0'
+    volumes:
+      - .:/app
+      - bundle:/usr/local/bundle
+    container_name: federation-account-ruby-2.4
+    tty: true
+    stdin_open: true
+    depends_on:
+      - db
+  db:
+    image: mariadb:10.4.3
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - "13306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    container_name: federation-account-db-2.4
+
+volumes:
+  bundle:
+  mysql_data:

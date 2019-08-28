@@ -10,7 +10,7 @@ module Types
     field :body, String, null: true
 
     def author
-      { __typename: 'UserType', id: object[:author_id]}
+      { __typename: Types::UserType, id: object[:author_id]}
     end
   end
 end

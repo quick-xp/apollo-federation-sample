@@ -1,5 +1,5 @@
 # README
-Account System For Apollo Federation Sample 
+Product System For Apollo Federation Sample 
 
 
 * Setup

@@ -1,24 +1,38 @@
 # README
+Product System For Apollo Federation Sample 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+* Setup
+```
+docker-compose build
+docker-compose run api bundle exec rake db:create
+docker-compose run api bundle exec rake db:migrate
+docker-compose run api bundle exec rake db:seed
+```
 
-* Ruby version
+* Run
+```
+docker-compose up api
+```
 
-* System dependencies
+* Sample
+```
+query {
+  topProducts {
+    id
+    name
+    price
+    upc
+    weight
+  }
+}
+```
+![image](https://user-images.githubusercontent.com/3175028/65484801-ee137480-deda-11e9-9d40-631a4e2d52a0.png)
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Connect to the database
+```
+host: 127.0.0.1
+user: root
+port: 13307
+```

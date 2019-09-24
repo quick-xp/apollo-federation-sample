@@ -8,6 +8,7 @@
       "sourceMap": true,
       "outDir": "dist",
       "baseUrl": ".",
+      "lib": ["es6", "dom", "esnext.asynciterable"],
       "paths": {
           "*": [
               "node_modules/*",

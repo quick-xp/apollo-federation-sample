@@ -1,18 +1,18 @@
 # README
-GraphQL Gateway For Apollo Federation Sample 
+Apollo Federation Sample
 
+## Setup & Run
+### Account System
+https://github.com/quick-xp/apollo-federation-sample/tree/master/account-ruby-2.4/README.md
 
-* Setup
-```
-docker-compose build
-cp config/development.env.template config/development.env
-```
+### Product System
+https://github.com/quick-xp/apollo-federation-sample/tree/master/product-ruby-2.4/README.md
 
-* Run
-```
-docker-compose up
-```
+### Review System
+https://github.com/quick-xp/apollo-federation-sample/blob/master/review-ruby-2.4/README.md
 
-* Sample
-![image](https://user-images.githubusercontent.com/3175028/65484523-3aaa8000-deda-11e9-959d-a27222ad85ca.png)
+### Gateway
+https://github.com/quick-xp/apollo-federation-sample/blob/master/gateway/README.md
 
+## Example
+<img width="1183" alt="image_99" src="https://user-images.githubusercontent.com/3175028/65485315-82320b80-dedc-11e9-9c7a-3b65dc444480.png">
